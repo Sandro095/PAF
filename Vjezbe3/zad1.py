@@ -6,10 +6,9 @@ p1.range()
 p1.plot_trajectory()
 p1.ana_domet()
 p1.relativa_greska()
-
 rel_greska = []
 p1.printInfo()
-#pozvat klasu 1000 puta klasu
+
 
 dt_ran = np.arange(0.01,0.5,0.001)
 
@@ -24,6 +23,7 @@ for i in range(len(dt_ran)):
 plt.figure(1)
 plt.plot(dt_ran,rel_greska,label="relativna pogreska")
 plt.show()
+
 
     
     

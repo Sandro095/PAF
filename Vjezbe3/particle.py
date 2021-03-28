@@ -69,11 +69,8 @@ class Particle:
         return self.rel_pog
         
     def printInfo(self):
-        print(f"cestica ima pocetnu brzinu {len(self.y)} {len(self.x)} {len(self.vy)} {len(self.vx)} {self.v0} pod kutem {self.kut} i u pocetnom trenutku nalaszi se na polozaju x={self.x[0]},y={self.y[0]}")
+        print(f"cestica ima pocetnu brzinu  {self.v0} pod kutem {self.kut} i u pocetnom trenutku nalaszi se na polozaju x={self.x[0]},y={self.y[0]}")
         
-        """plt.figure(2)
-        plt.plot([0,self.dt],[self.ana_domet,self.domet])
-        plt.show()"""
 
     
 
