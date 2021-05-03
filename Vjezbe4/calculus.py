@@ -38,7 +38,7 @@ def derivacja2(funk,xd,xg,e):
     for i in range(d):
         p=xd+i*e
         a.append(p)
-        k=deriviraj(funk,a[i],e)
+        k=deriviraj(funk,a[i],e,1)
         b.append(k)
     return a,b
         
@@ -115,6 +115,6 @@ def inte_graf(funk,xd,xg):
 #print(deriviraj(f1,2,0.001,0))
 #print(inte_graf(f1,2,4))
 #print(Graf(f1,0,10,0.01))
-#print(deriviraj(f1,2,0.01))
+#print(deriviraj(f1,2,0.01,1))
 #print(integriraj(f1,2,4,0.01))
 #print(trap_integral(f1,2,4,0.01))
