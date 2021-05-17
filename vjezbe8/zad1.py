@@ -53,7 +53,7 @@ class Particle:
         plt.ylabel("x-y")
         plt.show()
 
-    def gibanje_rangekuta(self):
+    """def gibanje_rangekuta(self):
         self.g= -9.81
         self.ro=1.225
         self.masa= 3
@@ -69,8 +69,11 @@ class Particle:
         self.ay=[self.C*self.ro*self.povrsina/(2*self.masa)*self.vyo]
         self.ax=[self.C*self.ro*self.povrsina/(2*self.masa)*self.vxo]
         while self.y0>=0:
-            self.ay0 = -9.81 -np.sign(self.vyo)*self.C*self.ro*self.povrsina/(2*self.masa)*(self.vyo)**2 
-            self.ax0 = -np.sign(self.vxo)*self.C*self.ro*self.povrsina/(2*self.masa)*(self.vxo)**2
+            self.k1vx = -9.81 -np.sign(self.vyo)*self.C*self.ro*self.povrsina/(2*self.masa)*(self.vyo)**2 
+            self.k1vy = -np.sign(self.vxo)*self.C*self.ro*self.povrsina/(2*self.masa)*(self.vxo)**2
+            self.k1xx = self.vxo*self.dt
+            self.k1xy =self.vyo*self.dt
+
             self.vxo = self.vxo + self.ax0*self.dt
             self.vyo = self.vyo + self.ay0*self.dt
             self.y0 = self.y0 + self.vyo*self.dt
@@ -93,7 +96,7 @@ class Particle:
         plt.figure(3)
         plt.plot(self.x,self.y,label="x-y")
         plt.ylabel("x-y")
-        plt.show()
+        plt.show()"""
 
 
 
