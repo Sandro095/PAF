@@ -39,3 +39,20 @@ Particle& Particle::method() {
 	time(t);
 	return *this;
 }
+double Particle::range() {
+	float t = 0;
+	vector<float> visine;
+	vector<float> udaljenosti;
+	vector<float>brzineY;
+	vector<float>brzineX;
+	float Vy0 = brzina * sin(kut_otklona * (PI / 180));
+	float Vx0 = brzina * cos(kut_otklona * (PI / 180));
+	for (int i = 0;i < 1000;i++) {
+		udaljenosti.push_back(increment_udaljenost(t, Vx0));
+		brzineY.push_back(increment_brzine(Vy0));
+		visine.push_back(increment_visine(polozaj, Vy0));
+		if (polozaj.y < 0)
+			break;
+	}
+	return udaljenosti.back();
+}

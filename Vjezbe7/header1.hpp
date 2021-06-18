@@ -26,7 +26,6 @@ private:
 	float increment_udaljenost(float &t, float Vx0);
 	float increment_brzine(float&Vy0);
 	float increment_visine(Point& polozaj, float& Vy0);
-	
 public:
 	Particle(float brzina, float kut, float x, float y);
 	Particle& method();
@@ -36,4 +35,5 @@ public:
 	void time(float time) {
 		cout << "Vrijeme=" << time << endl;;
 	}
+	double range();
 };
